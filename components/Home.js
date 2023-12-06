@@ -15,7 +15,7 @@ const Home = () => {
     title = `그냥 이걸 보세요`;
   }
   return (
-    <div className="mx-auto mt-8 w-1/2 space-y-4 ">
+    <div className="mt-8 space-y-4 sm:mx-auto md:w-1/2 ">
       <div className="bg-red-300 p-8 text-center">
         <h1>{title}</h1>
       </div>
