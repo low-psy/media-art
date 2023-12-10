@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import Item from './Item';
-import ModuleComponent from './ModuleComponent';
-import ErrorComponent from './ErrorComponent';
-
+import ModuleItem from './ModuleItem';
+import ErrorItem from './ErrorItem';
 let moduleCount = 0;
 
 const Home = () => {
@@ -54,11 +53,11 @@ const Home = () => {
 
     return (
         <div className=" mt-8 space-y-4 sm:mx-auto md:w-1/2">
-            {isError ? <ErrorComponent /> : null}
+            {isError ? <ErrorItem /> : null}
             {isModule ? (
-                <ModuleComponent width={w} color={c}>
+                <ModuleItem width={w} color={c}>
                     {t}
-                </ModuleComponent>
+                </ModuleItem>
             ) : null}
             <div className="bg-red-300 p-8 text-center">
                 <h1>{title}</h1>
