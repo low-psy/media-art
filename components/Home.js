@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Item from './Item';
-import Module from './ModuleComponent';
-import ErrorComponent from './Error';
+import ModuleComponent from './ModuleComponent';
+import ErrorComponent from './ErrorComponent';
 
 let moduleCount = 0;
 
@@ -56,9 +56,9 @@ const Home = () => {
         <div className=" mt-8 space-y-4 sm:mx-auto md:w-1/2">
             {isError ? <ErrorComponent /> : null}
             {isModule ? (
-                <Module width={w} color={c}>
+                <ModuleComponent width={w} color={c}>
                     {t}
-                </Module>
+                </ModuleComponent>
             ) : null}
             <div className="bg-red-300 p-8 text-center">
                 <h1>{title}</h1>
